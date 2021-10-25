@@ -1,8 +1,8 @@
-ARG CONTAINER=openwrt/sdk
-ARG ARCH=mips_24kc
+ARG CONTAINER=immortalwrt/opde
+ARG ARCH=sdk-x86_64
 FROM $CONTAINER:$ARCH
 
-LABEL "com.github.actions.name"="OpenWrt SDK"
+LABEL "com.github.actions.name"="ImmortalWrt SDK"
 
 ADD entrypoint.sh /
 

@@ -1,5 +1,5 @@
-name: "OpenWrt SDK"
-description: "Build OpenWrt packages via the SDK"
+name: "ImmortalWrt SDK"
+description: "Build ImmortalWrt packages via the SDK"
 author: aparcar
 runs:
   using: 'composite'

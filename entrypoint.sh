@@ -5,7 +5,7 @@ set -ef
 FEEDNAME="${FEEDNAME:-action}"
 BUILD_LOG="${BUILD_LOG:-1}"
 
-cd /home/build/openwrt/
+cd /openwrt/
 
 if [ -n "$KEY_BUILD" ]; then
 	echo "$KEY_BUILD" > key-build
