@@ -27,8 +27,8 @@ jobs:
     strategy:
       matrix:
         arch:
-          - sdk-x86_64
-          - sdk-bcm27xx_bcm2710
+          - x86_64
+          - mips_24kc
 
     steps:
       - uses: actions/checkout@v2
@@ -53,7 +53,7 @@ The action reads a few env variables:
 
 * `ARCH` determines the used ImmortalWrt SDK Docker container.
 * `BUILD_LOG` stores build logs in `./logs`.
-* `CONTAINER` can set other SDK containers than `immortalwrt/opde`.
+* `CONTAINER` can set other SDK containers than `immortalwrt/sdk`.
 * `EXTRA_FEEDS` are added to the `feeds.conf`, where `|` are replaced by white
   spaces.
 * `FEEDNAME` used in the created `feeds.conf` for the current repo. Defaults to

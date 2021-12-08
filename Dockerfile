@@ -1,5 +1,5 @@
-ARG CONTAINER=immortalwrt/opde
-ARG ARCH=sdk-x86_64
+ARG CONTAINER=immortalwrt/sdk
+ARG ARCH=mips_24kc
 FROM $CONTAINER:$ARCH
 
 LABEL "com.github.actions.name"="ImmortalWrt SDK"
