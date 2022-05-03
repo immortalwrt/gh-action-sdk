@@ -5,7 +5,7 @@ set -ef
 FEEDNAME="${FEEDNAME:-action}"
 BUILD_LOG="${BUILD_LOG:-1}"
 
-cd /openwrt/
+cd /home/build/immortalwrt/
 
 if [ -n "$KEY_BUILD" ]; then
 	echo "$KEY_BUILD" > key-build
