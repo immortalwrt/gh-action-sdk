@@ -36,7 +36,7 @@ jobs:
           fetch-depth: 0
 
       - name: Build
-        uses: immortalwrt/gh-action-sdk@master
+        uses: immortalwrt/gh-action-sdk@composite
         env:
           ARCH: ${{ matrix.arch }}
 
@@ -52,10 +52,14 @@ jobs:
 The action reads a few env variables:
 
 * `ARCH` determines the used ImmortalWrt SDK Docker container.
+* `ARTIFACTS_DIR` determines where built packages and build logs are saved.
+  Defaults to the default working directory (`GITHUB_WORKSPACE`).
 * `BUILD_LOG` stores build logs in `./logs`.
 * `CONTAINER` can set other SDK containers than `immortalwrt/sdk`.
 * `EXTRA_FEEDS` are added to the `feeds.conf`, where `|` are replaced by white
   spaces.
+* `FEED_DIR` used in the created `feeds.conf` for the current repo. Defaults to
+  the default working directory (`GITHUB_WORKSPACE`).
 * `FEEDNAME` used in the created `feeds.conf` for the current repo. Defaults to
   `action`.
 * `IGNORE_ERRORS` can ignore failing packages builds.

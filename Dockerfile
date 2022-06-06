@@ -6,6 +6,4 @@ LABEL "com.github.actions.name"="ImmortalWrt SDK"
 
 ADD entrypoint.sh /
 
-USER root
-
 ENTRYPOINT ["/entrypoint.sh"]
