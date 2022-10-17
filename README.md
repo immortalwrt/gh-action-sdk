@@ -31,12 +31,12 @@ jobs:
           - mips_24kc
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
       - name: Build
-        uses: immortalwrt/gh-action-sdk@composite
+        uses: immortalwrt/gh-action-sdk@master
         env:
           ARCH: ${{ matrix.arch }}
 
