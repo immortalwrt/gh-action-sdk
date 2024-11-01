@@ -52,6 +52,7 @@ jobs:
 The action reads a few env variables:
 
 * `ARCH` determines the used ImmortalWrt SDK Docker container.
+  E.g. `x86_64` or `x86_64-23.05.4`.
 * `ARTIFACTS_DIR` determines where built packages and build logs are saved.
   Defaults to the default working directory (`GITHUB_WORKSPACE`).
 * `BUILD_LOG` stores build logs in `./logs`.
@@ -63,9 +64,10 @@ The action reads a few env variables:
 * `FEEDNAME` used in the created `feeds.conf` for the current repo. Defaults to
   `action`.
 * `IGNORE_ERRORS` can ignore failing packages builds.
-* `KEY_BUILD` can be a private Signify/`usign` key to sign the packages feed.
 * `INDEX` makes the action build the package index. Default is 0. Set to 1 to enable.
+* `KEY_BUILD` can be a private Signify/`usign` key to sign the packages feed.
 * `NO_DEFAULT_FEEDS` disable adding the default SDK feeds
 * `NO_REFRESH_CHECK` disable check if patches need a refresh.
 * `NO_SHFMT_CHECK` disable check if init files are formated
+* `PACKAGES` (Optional) specify the list of packages (space separated) to be built
 * `V` changes the build verbosity level.
